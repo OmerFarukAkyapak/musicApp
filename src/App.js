@@ -8,7 +8,8 @@ import React from 'react'
 import music_data from './music-data.json'
 import SongCard from './components/SongCard'
 
-const renderSong = ({ item }) => <Text>{item.title}</Text>
+const renderSong = ({ item }) => <SongCard song={item} />
+const renderSeparator = () => <View style={styles.separator} />
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         keyExtractor={item => item.id}
         data={music_data}
         renderItem={renderSong}
+        ItemSeparatorComponent={renderSeparator}
       />
     </View>
   )
@@ -27,7 +29,9 @@ export default App
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightgray'
-
+  },
+  separator: {
+    borderWidth: 1,
+    borderColor: 'gray'
   }
 })
