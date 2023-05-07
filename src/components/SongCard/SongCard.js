@@ -18,12 +18,12 @@ const SongCard = ({ song }) => {
                         <Text style={styles.artisttext}>{song.artist}</Text>
                         <Text style={styles.yeartext}>{song.year}</Text>
                     </View>
-
                     {song.isSoldOut && (
                         <View style={styles.soldout_container}>
                             <Text style={styles.soldout_text}>Sold Out!</Text>
                         </View>)}
                 </View>
+                <Text style={styles.albumtext}>{song.album}</Text>
             </View>
         </View>
 

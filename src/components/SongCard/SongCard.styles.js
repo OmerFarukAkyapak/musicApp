@@ -29,6 +29,10 @@ export default StyleSheet.create({
     artisttext: {
         fontWeight: 'bold',
     },
+    albumtext: {
+        fontWeight: 'bold',
+        color: 'white'
+    },
     yeartext: {
         marginLeft: 10,
         color: 'gray',
@@ -47,6 +51,7 @@ export default StyleSheet.create({
         color: 'red',
     },
     content_container: {
+        flex: 1,
         flexDirection: 'row',
     }
 

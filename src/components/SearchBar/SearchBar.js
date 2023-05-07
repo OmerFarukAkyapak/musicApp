@@ -2,13 +2,13 @@ import React from 'react';
 import { View, TextInput } from 'react-native';
 import styles from './SearchBar.styles';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
 
     return (
         <View style={styles.container}>
             <TextInput
                 placeholder='Search Here'
-                onChangeText={(text) => console.log(text)}
+                onChangeText={props.onSearch}
             />
         </View>
     )
