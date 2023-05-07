@@ -1,19 +1,24 @@
 import {
   View,
-  Text,
   StyleSheet,
   FlatList
 } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import music_data from './music-data.json'
 import SongCard from './components/SongCard'
+import SearchBar from './components/SearchBar'
+
+
 
 const renderSong = ({ item }) => <SongCard song={item} />
 const renderSeparator = () => <View style={styles.separator} />
 
+
+
 const App = () => {
   return (
     <View style={styles.container}>
+      <SearchBar />
       <FlatList
         keyExtractor={item => item.id}
         data={music_data}
